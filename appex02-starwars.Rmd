@@ -53,9 +53,9 @@ use_git_config(user.name="Rami Sbahi", user.email="rami.sbahi@duke.edu")
 
 ```{r starwars-plot, fig.width=8, fig.height=5}
 ggplot(data = starwars, 
-       mapping = aes(x = height, y = mass, color = gender, size = birth_year)) +
-  geom_point(color = "#30509C") +
-  labs(title = "_____" , size = "_____", x = "_____", y = "_____")
+      aes(x = height, y = mass, color = gender, size = birth_year)) +
+  geom_point(size = 3) + facet_grid(. ~ gender) + 
+  labs(title = "Mass vs. Height of Star Wars" , subtitle = "Facets by gender", size = "_____", x = "Height", y = "Mass")
 ```
 
 2. Add labels for `title`, `x` and `y` axes, and `size` of points. Knit again.
@@ -64,7 +64,8 @@ ggplot(data = starwars,
    code in the chunk below.
    
 ```{r starwars-histogram}
-
+ggplot(data = starwars, mapping = aes(x = mass)) + 
+   geom_histogram(binwidth = 40)
 ```
    
 ## Stage, commit and push
