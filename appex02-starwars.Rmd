@@ -40,15 +40,8 @@ your name and email address.
 
 ```{r config-git-ex, eval=FALSE}
 library(usethis)
-use_git_config(user.name="your name", user.email="your email")
+use_git_config(user.name="Rami Sbahi", user.email="rami.sbahi@duke.edu")
 ```
-
-For example, mine would be  
-
-```{r config-git-ex2, eval=FALSE}
-library(usethis)
-use_git_config(user.name="Shawn Santo", user.email="shawn.santo@duke.edu")
-``````
 
 **RStudio and GitHub can now communicate with each other and you are **
 **ready to do the exercise below!**
